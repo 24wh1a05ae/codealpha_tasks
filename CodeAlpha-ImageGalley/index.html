@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image Gallery</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h3>Welcome To</h3>
+
+        <h1>IMAGE GALLERY</h1>
+
+        <p>Explore Beautiful Nature, Cities & Animals</p>
+
+        <div class="categories">
+
+            <span><i class="fa-solid fa-leaf"></i> Nature</span>
+
+            <span><i class="fa-solid fa-city"></i> City</span>
+
+            <span><i class="fa-solid fa-paw"></i> Animals</span>
+
+        </div>
+
+        <button id="enterBtn">
+            <i class="fa-solid fa-image"></i>
+            Enter Gallery
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= GALLERY SECTION ================= -->
+
+<section id="gallerySection">
+
+    <header>
+
+        <h2>
+            <i class="fa-solid fa-images"></i>
+            Image Gallery
+        </h2>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search category...">
+
+    </header>
+
+    <!-- FILTER BUTTONS -->
+
+    <div class="buttons">
+
+        <button class="active" onclick="filterImages('all')">
+            All
+        </button>
+
+        <button onclick="filterImages('nature')">
+            Nature
+        </button>
+
+        <button onclick="filterImages('city')">
+            City
+        </button>
+
+        <button onclick="filterImages('animal')">
+            Animals
+        </button>
+
+    </div>
+
+    <!-- IMAGE GALLERY -->
+
+    <div class="gallery">
+
+        <div class="image nature">
+            <img src="images/image1.jpg"
+                 alt="Nature"
+                 onclick="openLightbox(0)">
+            <div class="caption">
+                Code Alpha
+            </div>
+        </div>
+
+        <div class="image nature">
+            <img src="images/krish.jpg"
+                 alt="Nature"
+                 onclick="openLightbox(1)">
+            <div class="caption">
+                Lord Krishna 
+            </div>
+        </div>
+
+        <div class="image city">
+            <img src="images/city1.jpg"
+                 alt="City"
+                 onclick="openLightbox(2)">
+            <div class="caption">
+                Night City
+            </div>
+        </div>
+
+        <div class="image city">
+            <img src="images/city2.jpg"
+                 alt="City"
+                 onclick="openLightbox(3)">
+            <div class="caption">
+                Modern Skyline
+            </div>
+        </div>
+
+        <div class="image animal">
+            <img src="images/animal1.jpg"
+                 alt="Animal"
+                 onclick="openLightbox(4)">
+            <div class="caption">
+                Pet
+            </div>
+        </div>
+
+        <div class="image animal">
+            <img src="images/animal2.jpg"
+                 alt="Animal"
+                 onclick="openLightbox(5)">
+            <div class="caption">
+                Cute Puppy
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div id="lightbox">
+
+    <span class="close" onclick="closeLightbox()">
+        &times;
+    </span>
+
+    <button class="prev" onclick="changeImage(-1)">
+        &#10094;
+    </button>
+
+    <img id="lightbox-img" alt="Preview">
+
+    <button class="next" onclick="changeImage(1)">
+        &#10095;
+    </button>
+
+    <div id="counter"></div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p> |
+        CodeAlpha Internship Project - IMAGE GALLERY
+    </p>
+
+</footer>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kiddo Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>CALCULATOR 🌈</h1>
+
+    <div class="container">
+
+        <div class="quote">
+            "Every expert was once a beginner."
+        </div>
+
+        <div class="calculator">
+            <input type="text" id="display" readonly>
+
+            <div class="buttons">
+                <button class="pink" onclick="clearDisplay()">C</button>
+                <button class="orange" onclick="appendValue('/')">÷</button>
+                <button class="orange" onclick="appendValue('*')">×</button>
+                <button class="yellow" onclick="appendValue('-')">−</button>
+
+                <button class="purple" onclick="appendValue('7')">7</button>
+                <button class="blue" onclick="appendValue('8')">8</button>
+                <button class="cyan" onclick="appendValue('9')">9</button>
+                <button class="green" onclick="appendValue('+')">+</button>
+
+                <button class="purple" onclick="appendValue('4')">4</button>
+                <button class="blue" onclick="appendValue('5')">5</button>
+                <button class="cyan" onclick="appendValue('6')">6</button>
+
+                <button class="purple" onclick="appendValue('1')">1</button>
+                <button class="blue" onclick="appendValue('2')">2</button>
+                <button class="cyan" onclick="appendValue('3')">3</button>
+
+                <button class="purple zero" onclick="appendValue('0')">0</button>
+                <button class="pink" onclick="appendValue('.')">.</button>
+                <button class="green equal" onclick="calculate()">=</button>
+            </div>
+        </div>
+
+        <div class="quote">
+            "Keep learning, keep growing!"
+        </div>
+
+    </div>
+
+    <footer>
+        ⭐ Be Smart, Do Your Part! ⭐
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
